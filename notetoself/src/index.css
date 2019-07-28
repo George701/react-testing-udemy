@@ -2,3 +2,14 @@ body{
     text-align: center;
     padding: 5%;
 }
+
+.list-group{
+    width: 50vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.list-group-item{
+    margin: .5rem 0;
+}
