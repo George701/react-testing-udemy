@@ -1,4 +1,4 @@
-import { SET_STACK } from './types';
+import { SET_STACK, LOAD_STACK } from './types';
 
 export const setStack = stack => {
     // console.log('actions: ', stack)
@@ -6,4 +6,12 @@ export const setStack = stack => {
         type: SET_STACK,
         stack: stack
     };
+}
+
+export const loadStacks = stacks => {
+    // console.log('actions: ', stacks)
+    return {
+        type: LOAD_STACK,
+        stacks: stacks
+    }
 }

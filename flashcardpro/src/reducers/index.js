@@ -1,12 +1,8 @@
-import {SET_STACK} from '../actions/types';
+import { combineReducers } from 'redux';
+import stack from './stackReducer';
+import stacks from './stacksReducer';
 
-export default (state = {}, action) => {
-    switch(action.type){
-        case SET_STACK:
-            // console.log('reducer: ', action);
-            return action.stack;
-        default:
-            return state;
-    }
-    
-}
+export default combineReducers({
+    stack,
+    stacks
+});
