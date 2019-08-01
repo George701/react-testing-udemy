@@ -3,15 +3,17 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Card from './Card'
 
-class Stack extends Component {
+export class Stack extends Component {
     render() {
         // console.log('stack props: ', this.props);
         const { title, cards } = this.props.stack;
-        console.log(title, cards)
+        // console.log(title, cards)
         if(cards !== undefined && title !== undefined){
             return (
                 <div>
-                    <Link to='/' className='link-home'>Home</Link>
+                    <Link to='/' className='link-home'>
+                        <h4>Home</h4>
+                    </Link>
                     <h3>{title}</h3>
                     <br />
                     {

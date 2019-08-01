@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import stacks from '../data/stacks.json';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { setStack, loadStacks } from '../actions';
+import stacks from '../data/stacks.json';
 
-class StackList extends Component {
+
+export class StackList extends Component {
 
     componentDidMount(){
         if(this.props.stacks.length === 0) this.props.loadStacks(stacks);
@@ -12,10 +13,8 @@ class StackList extends Component {
 
     render() {
         const {stacks} = this.props;
-        return (
-            <div>
-                <h1>FlashCard Pro</h1>
-                <hr/>
+        if(stacks !== undefined){
+            return (
                 <div>
                     {
                         stacks.map(stack => {
@@ -27,10 +26,11 @@ class StackList extends Component {
                         })
                     }
                 </div>
-                <hr/>
-                <Link to='/stack_form'><h4>Create a New Stack</h4></Link>
-            </div>
-        )
+            )
+        }else{
+            return <h4>Loading...</h4>
+        }
+        
     }
 }
 
