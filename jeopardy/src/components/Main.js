@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { setCategories, pickCategory } from '../actions';
 import { Link } from 'react-router-dom';
 
-class Main extends Component {
+export class Main extends Component {
 
     componentDidMount(){
         if(this.props.categories.length === 0){
