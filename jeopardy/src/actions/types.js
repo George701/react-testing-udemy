@@ -1,0 +1,2 @@
+export const SET_CATIGORIES = 'SET_CATIGORIES';
+export const PICK_CATIGORY = 'PICK_CATIGORY';
